@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-29T14:54:02.320425" rpa="false" schemaversion="5">
+<suite id="s1" name="New folder" source="C:\Users\basph\OneDrive\เดสก์ท็อป\New folder\New folder">
+<suite id="s1-s1" name="quiz-Robot-FW" source="C:\Users\basph\OneDrive\เดสก์ท็อป\New folder\New folder\quiz-Robot-FW.robot">
+<kw name="Open Browser" owner="Selenium2Library" type="SETUP">
+<msg time="2024-01-29T14:54:02.497086" level="INFO">Opening browser 'chrome' to base url 'http://automationexercise.com'.</msg>
+<arg>http://automationexercise.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-29T14:54:02.496086" elapsed="6.160116"/>
+</kw>
+<test id="s1-s1-t1" name="Search Products and Verify Cart After Login" line="43">
+<kw name="Click on 'Products' button">
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2024-01-29T14:54:08.659220" level="INFO">Clicking element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[2]/a'.</msg>
+<arg>//*[@id="header"]/div/div/div/div[2]/div/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T14:54:08.658215" elapsed="3.177554"/>
+</kw>
+<status status="PASS" start="2024-01-29T14:54:08.658215" elapsed="3.177554"/>
+</kw>
+<kw name="Enter product name in search input">
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-01-29T14:54:11.836780" level="INFO">Typing text 'Stylish Dress' into text field '//*[@name="search"]'.</msg>
+<arg>//*[@name="search"]</arg>
+<arg>${productName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T14:54:11.836780" elapsed="0.097977"/>
+</kw>
+<arg>${productName}</arg>
+<status status="PASS" start="2024-01-29T14:54:11.835769" elapsed="0.098988"/>
+</kw>
+<kw name="click search button">
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2024-01-29T14:54:11.936769" level="INFO">Clicking element '//*[@id="submit_search"]'.</msg>
+<arg>//*[@id="submit_search"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T14:54:11.935769" elapsed="0.834062"/>
+</kw>
+<status status="PASS" start="2024-01-29T14:54:11.935769" elapsed="0.835116"/>
+</kw>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<msg time="2024-01-29T14:54:12.793580" level="INFO">Current page contains text 'Stylish Dress'.</msg>
+<arg>${productName}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-01-29T14:54:12.770885" elapsed="0.023699"/>
+</kw>
+<kw name="Add those products to cart">
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2024-01-29T14:54:12.795795" level="INFO">Clicking element '//*[@data-product-id="4"]'.</msg>
+<arg>//*[@data-product-id="4"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T14:54:12.794584" elapsed="0.155394"/>
+</kw>
+<status status="PASS" start="2024-01-29T14:54:12.794584" elapsed="0.155394"/>
+</kw>
+<kw name="Click 'Signup / Login' button">
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2024-01-29T14:54:12.952979" level="INFO">Clicking element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
+<msg time="2024-01-29T14:54:52.215823" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF738D92142+3514994]
+	(No symbol) [0x00007FF7389B0CE2]
+	(No symbol) [0x00007FF7388576AA]
+	(No symbol) [0x00007FF73883FD6A]
+	(No symbol) [0x00007FF73883FC20]
+	(No symbol) [0x00007FF7388599A1]
+	(No symbol) [0x00007FF7388E21B7]
+	(No symbol) [0x00007FF7388C5D93]
+	(No symbol) [0x00007FF738894BDC]
+	(No symbol) [0x00007FF738895C64]
+	GetHandleVerifier [0x00007FF738DBE16B+3695259]
+	GetHandleVerifier [0x00007FF738E16737+4057191]
+	GetHandleVerifier [0x00007FF738E0E4E3+4023827]
+	GetHandleVerifier [0x00007FF738AE04F9+689705]
+	(No symbol) [0x00007FF7389BC048]
+	(No symbol) [0x00007FF7389B8044]
+	(No symbol) [0x00007FF7389B81C9]
+	(No symbol) [0x00007FF7389A88C4]
+	BaseThreadInitThunk [0x00007FF8F7C5257D+29]
+	RtlUserThreadStart [0x00007FF8F8CEAA78+40]
+</msg>
+<msg time="2024-01-29T14:54:52.222158" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF738D92142+3514994]
+	(No symbol) [0x00007FF7389B0CE2]
+	(No symbol) [0x00007FF7388576AA]
+	(No symbol) [0x00007FF73883EB20]
+	(No symbol) [0x00007FF73883F7CE]
+	(No symbol) [0x00007FF73884DC02]
+	(No symbol) [0x00007FF738864471]
+	(No symbol) [0x00007FF73886937A]
+	(No symbol) [0x00007FF73883FEC6]
+	(No symbol) [0x00007FF7388640AD]
+	(No symbol) [0x00007FF7388E2AEF]
+	(No symbol) [0x00007FF7388C5D93]
+	(No symbol) [0x00007FF738894BDC]
+	(No symbol) [0x00007FF738895C64]
+	GetHandleVerifier [0x00007FF738DBE16B+3695259]
+	GetHandleVerifier [0x00007FF738E16737+4057191]
+	GetHandleVerifier [0x00007FF738E0E4E3+4023827]
+	GetHandleVerifier [0x00007FF738AE04F9+689705]
+	(No symbol) [0x00007FF7389BC048]
+	(No symbol) [0x00007FF7389B8044]
+	(No symbol) [0x00007FF7389B81C9]
+	(No symbol) [0x00007FF7389A88C4]
+	BaseThreadInitThunk [0x00007FF8F7C5257D+29]
+	RtlUserThreadStart [0x00007FF8F8CEAA78+40]
+</msg>
+<arg>//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-01-29T14:54:12.951980" elapsed="39.276451">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF738D92142+3514994]
+	(No symbol) [0x00007FF7389B0CE2]
+	(No symbol) [0x00007FF7388576AA]
+	(No symbol) [0x00007FF73883EB20]
+	(No symbol) [0x00007FF73883F7CE]
+	(No symbol) [0x00007FF73884DC02]
+	(No symbol) [0x00007FF738864471]
+	(No symbol) [0x00007FF73886937A]
+	(No symbol) [0x00007FF73883FEC6]
+	(No symbol) [0x00007FF7388640AD]
+	(No symbol) [0x00007FF7388E2AEF]
+	(No symbol) [0x00007FF7388C5D93]
+	(No symbol) [0x00007FF738894BDC]
+	(No symbol) [0x00007FF738895C64]
+	GetHandleVerifier [0x00007FF738DBE16B+3695259]
+	GetHandleVerifier [0x00007FF738E16737+4057191]
+	GetHandleVerifier [0x00007FF738E0E4E3+4023827]
+	GetHandleVerifier [0x00007FF738AE04F9+689705]
+	(No symbol) [0x00007FF7389BC048]
+	(No symbol) [0x00007FF7389B8044]
+	(No symbol) [0x00007FF7389B81C9]
+	(No symbol) [0x00007FF7389A88C4]
+	BaseThreadInitThunk [0x00007FF8F7C5257D+29]
+	RtlUserThreadStart [0x00007FF8F8CEAA78+40]
+</status>
+</kw>
+<status status="FAIL" start="2024-01-29T14:54:12.950979" elapsed="39.277452">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF738D92142+3514994]
+	(No symbol) [0x00007FF7389B0CE2]
+	(No symbol) [0x00007FF7388576AA]
+	(No symbol) [0x00007FF73883EB20]
+	(No symbol) [0x00007FF73883F7CE]
+	(No symbol) [0x00007FF73884DC02]
+	(No symbol) [0x00007FF738864471]
+	(No symbol) [0x00007FF73886937A]
+	(No symbol) [0x00007FF73883FEC6]
+	(No symbol) [0x00007FF7388640AD]
+	(No symbol) [0x00007FF7388E2AEF]
+	(No symbol) [0x00007FF7388C5D93]
+	(No symbol) [0x00007FF738894BDC]
+	(No symbol) [0x00007FF738895C64]
+	GetHandleVerifier [0x00007FF738DBE16B+3695259]
+	GetHandleVerifier [0x00007FF738E16737+4057191]
+	GetHandleVerifier [0x00007FF738E0E4E3+4023827]
+	GetHandleVerifier [0x00007FF738AE04F9+689705]
+	(No symbol) [0x00007FF7389BC048]
+	(No symbol) [0x00007FF7389B8044]
+	(No symbol) [0x00007FF7389B81C9]
+	(No symbol) [0x00007FF7389A88C4]
+	BaseThreadInitThunk [0x00007FF8F7C5257D+29]
+	RtlUserThreadStart [0x00007FF8F8CEAA78+40]
+</status>
+</kw>
+<kw name="go to Cart page">
+<status status="NOT RUN" start="2024-01-29T14:54:52.229467" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<arg>${PRODUCT_NAME}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-01-29T14:54:52.229467" elapsed="0.001302"/>
+</kw>
+<status status="FAIL" start="2024-01-29T14:54:08.656202" elapsed="43.574567">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF738D92142+3514994]
+	(No symbol) [0x00007FF7389B0CE2]
+	(No symbol) [0x00007FF7388576AA]
+	(No symbol) [0x00007FF73883EB20]
+	(No symbol) [0x00007FF73883F7CE]
+	(No symbol) [0x00007FF73884DC02]
+	(No symbol) [0x00007FF738864471]
+	(No symbol) [0x00007FF73886937A]
+	(No symbol) [0x00007FF73883FEC6]
+	(No symbol) [0x00007FF7388640AD]
+	(No symbol) [0x00007FF7388E2AEF]
+	(No symbol) [0x00007FF7388C5D93]
+	(No symbol) [0x00007FF738894BDC]
+	(No symbol) [0x00007FF738895C64]
+	GetHandleVerifier [0x00007FF738DBE16B+3695259]
+	GetHandleVerifier [0x00007FF738E16737+4057191]
+	GetHandleVerifier [0x00007FF738E0E4E3+4023827]
+	GetHandleVerifier [0x00007FF738AE04F9+689705]
+	(No symbol) [0x00007FF7389BC048]
+	(No symbol) [0x00007FF7389B8044]
+	(No symbol) [0x00007FF7389B81C9]
+	(No symbol) [0x00007FF7389A88C4]
+	BaseThreadInitThunk [0x00007FF8F7C5257D+29]
+	RtlUserThreadStart [0x00007FF8F8CEAA78+40]
+</status>
+</test>
+<status status="FAIL" start="2024-01-29T14:54:02.343597" elapsed="49.890772"/>
+</suite>
+<status status="FAIL" start="2024-01-29T14:54:02.324460" elapsed="49.912216"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="New folder">New folder</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="quiz-Robot-FW">New folder.quiz-Robot-FW</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-01-29T14:54:52.215823" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=120.0.6099.225)
+Stacktrace:
+	GetHandleVerifier [0x00007FF738D92142+3514994]
+	(No symbol) [0x00007FF7389B0CE2]
+	(No symbol) [0x00007FF7388576AA]
+	(No symbol) [0x00007FF73883FD6A]
+	(No symbol) [0x00007FF73883FC20]
+	(No symbol) [0x00007FF7388599A1]
+	(No symbol) [0x00007FF7388E21B7]
+	(No symbol) [0x00007FF7388C5D93]
+	(No symbol) [0x00007FF738894BDC]
+	(No symbol) [0x00007FF738895C64]
+	GetHandleVerifier [0x00007FF738DBE16B+3695259]
+	GetHandleVerifier [0x00007FF738E16737+4057191]
+	GetHandleVerifier [0x00007FF738E0E4E3+4023827]
+	GetHandleVerifier [0x00007FF738AE04F9+689705]
+	(No symbol) [0x00007FF7389BC048]
+	(No symbol) [0x00007FF7389B8044]
+	(No symbol) [0x00007FF7389B81C9]
+	(No symbol) [0x00007FF7389A88C4]
+	BaseThreadInitThunk [0x00007FF8F7C5257D+29]
+	RtlUserThreadStart [0x00007FF8F8CEAA78+40]
+</msg>
+</errors>
+</robot>
